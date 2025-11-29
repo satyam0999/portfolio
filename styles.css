@@ -1,0 +1,593 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray-light: #f5f5f5;
+    --gray-medium: #999999;
+    --gray-dark: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f5f5f5 100%);
+    color: var(--black);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.name {
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.role {
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 400;
+    color: var(--gray-dark);
+    margin-bottom: 24px;
+    letter-spacing: 0.01em;
+}
+
+.tagline {
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 300;
+    color: var(--gray-medium);
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.link:hover {
+    border-bottom-color: var(--black);
+}
+
+.separator {
+    color: var(--gray-medium);
+    font-weight: 300;
+}
+
+/* Section Base Styles */
+section {
+    padding: 80px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+}
+
+/* About Section */
+.about-text {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.8;
+    color: var(--gray-dark);
+    font-weight: 300;
+    max-width: 700px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.skill-category {
+    padding: 24px 0;
+}
+
+.skill-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.skill-list {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--gray-medium);
+    font-weight: 400;
+}
+
+/* Experience Section */
+.timeline {
+    border-left: 1px solid #e5e5e5;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -44px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 50%;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.company {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.period {
+    font-size: 14px;
+    color: var(--gray-medium);
+    font-weight: 400;
+}
+
+.position {
+    font-size: 16px;
+    color: var(--gray-dark);
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.location {
+    font-size: 14px;
+    color: var(--gray-medium);
+    font-weight: 400;
+}
+
+/* Projects Section */
+.project-card {
+    padding: 32px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.project-card:last-child {
+    border-bottom: none;
+}
+
+.project-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gray-dark);
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+.project-highlights {
+    margin-bottom: 32px;
+}
+
+.highlight-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.highlight-label {
+    color: var(--black);
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.highlight-value {
+    color: var(--gray-dark);
+    font-weight: 400;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-tag {
+    font-size: 13px;
+    padding: 6px 16px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    color: var(--gray-dark);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    border-color: var(--black);
+    color: var(--black);
+    background-color: #f0f0f0;
+}
+
+/* Work Projects (nested under Experience) */
+.work-projects {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.work-project {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.work-project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.work-project-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.work-project-desc {
+    font-size: 15px;
+    color: var(--gray-dark);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Irish Folk Music Project Specific Styles */
+.project-subsection {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.project-list {
+    list-style: none;
+    margin-bottom: 16px;
+    padding-left: 0;
+}
+
+.project-list li {
+    font-size: 15px;
+    color: var(--gray-dark);
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.project-list li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: var(--gray-medium);
+}
+
+.project-desc {
+    font-size: 15px;
+    color: var(--gray-dark);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.project-link {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.project-link:hover {
+    border-bottom-color: var(--black);
+}
+
+/* Education Section */
+.education-item {
+    max-width: 600px;
+}
+
+.degree {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.institution {
+    font-size: 16px;
+    color: var(--gray-dark);
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.grade {
+    font-size: 15px;
+    color: var(--gray-medium);
+    font-weight: 400;
+}
+
+/* Achievements Section */
+.achievements-list {
+    list-style: none;
+    max-width: 700px;
+}
+
+.achievements-list li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gray-dark);
+    margin-bottom: 16px;
+    padding-left: 24px;
+    position: relative;
+    font-weight: 400;
+}
+
+.achievements-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gray-medium);
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.contact-item {
+    color: var(--gray-dark);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.contact-item:hover {
+    color: var(--black);
+}
+
+a.contact-item {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    padding-bottom: 2px;
+}
+
+a.contact-item:hover {
+    border-bottom-color: var(--black);
+}
+
+.social-links {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.social-link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.social-link:hover {
+    border-bottom-color: var(--black);
+}
+
+/* Footer */
+.footer {
+    padding: 64px 0;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    color: var(--gray-medium);
+    font-weight: 300;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay-1 {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.2s forwards;
+}
+
+.fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.4s forwards;
+}
+
+.fade-in-delay-3 {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 32px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 40px 0;
+    }
+
+    .hero-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline-item::before {
+        left: -28px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .project-card {
+        padding: 24px 0;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .highlight-label {
+        min-width: auto;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .project-title {
+        font-size: 24px;
+    }
+
+    .company {
+        font-size: 20px;
+    }
+}
