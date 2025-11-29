@@ -1,3 +1,10 @@
+// Project expand/collapse toggle
+function toggleProject(header) {
+    header.classList.toggle('expanded');
+    const content = header.nextElementSibling;
+    content.classList.toggle('expanded');
+}
+
 // Scroll animation observer
 const observerOptions = {
     threshold: 0.1,
