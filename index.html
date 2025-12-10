@@ -25,7 +25,7 @@
                 <span class="separator">·</span>
                 <a href="https://leetcode.com/satyamsingh9541" class="link" target="_blank">LeetCode</a>
                 <span class="separator">·</span>
-                <a href="https://drive.google.com/file/d/1rOC4R7M-nOhjd30QCQoldJDakcsFDVNT/view?usp=sharing" class="link resume-link" target="_blank">Resume</a>
+                <a href="https://docs.google.com/document/d/10fBP_pnLrZIHBll0iaRqqjz2J66UWWtf4oh_63ovUJM/edit?usp=sharing" class="link resume-link" target="_blank">Resume</a>
             </div>
         </div>
     </section>
@@ -144,6 +144,69 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             
+            <div class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h3 class="project-title">Velocity Engine - Local AI Code Completion</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Local AI-powered code completion engine optimized for GTX 1650 (4GB VRAM). Built a complete VS Code extension with real-time code suggestions running entirely on GPU, featuring live performance monitoring and stress testing capabilities.
+                    </p>
+                    
+                    <h4 class="project-subsection">Key Features</h4>
+                    <ul class="project-list">
+                        <li><strong>Performance:</strong> 3.3s avg latency for 64 tokens, 20 tokens/sec generation speed</li>
+                        <li><strong>Throughput:</strong> 0.82 req/s concurrent, optimized for 4GB VRAM constraints</li>
+                        <li><strong>Architecture:</strong> Single model approach (rejected speculative decoding after benchmarking 25% slower)</li>
+                        <li><strong>Stack:</strong> FastAPI backend, Qwen2.5-Coder model, llama-cpp-python with full GPU offload</li>
+                        <li><strong>Monitoring:</strong> Streamlit dashboard with real-time latency metrics and performance charts</li>
+                        <li><strong>Repository:</strong> <a href="https://github.com/satyam0999/velocity-engine" target="_blank" class="project-link">View on GitHub</a></li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">CUDA</span>
+                        <span class="tech-tag">llama.cpp</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">VS Code API</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h3 class="project-title">Ocular Agent - Vision-Based Web Automation</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Intelligent web automation agent using vision AI and adaptive planning to navigate and interact with websites autonomously. Combines Qwen2.5-VL for visual understanding with DeepSeek for strategic planning to execute complex multi-step tasks from natural language commands.
+                    </p>
+                    
+                    <h4 class="project-subsection">Key Features</h4>
+                    <ul class="project-list">
+                        <li><strong>Adaptive Planning:</strong> Creates plans and adjusts based on real-time feedback, self-correcting when actions fail</li>
+                        <li><strong>Vision-Based Navigation:</strong> Uses Qwen2.5-VL-3B to understand web pages visually with Set-of-Mark (SoM) element identification</li>
+                        <li><strong>Natural Language Interface:</strong> Execute complex tasks like "open blinkit and add 5 maggi packets to cart"</li>
+                        <li><strong>Architecture:</strong> DeepSeek for task planning, Qwen2.5-VL for vision, Playwright for browser control</li>
+                        <li><strong>Demo:</strong> <a href="https://www.youtube.com/channel/UCbt0-AL6tCptqynTQxFzkXQ" target="_blank" class="project-link">Watch on YouTube</a></li>
+                        <li><strong>Repository:</strong> <a href="https://github.com/satyam0999/ocular-agent" target="_blank" class="project-link">View on GitHub</a></li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Qwen2.5-VL</span>
+                        <span class="tech-tag">DeepSeek API</span>
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">LLMs</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card">
                 <div class="project-header" onclick="toggleProject(this)">
                     <h3 class="project-title">Irish Folk Music Generation with RNN</h3>
